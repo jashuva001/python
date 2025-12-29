@@ -1,12 +1,15 @@
 import re
 
-def is_palindrome(s):
-    cleaned = re.sub(r'[^A-Za-z0-9]', '', s).lower()
+def is_palindrome(M):
+    cleaned = re.sub(r'[^A-Za-z0-9]', '', M).lower()
     return cleaned == cleaned[::-1]
 
 def main():
-    s = input("Enter text: ")
-    print("Palindrome" if is_palindrome(s) else "Not a palindrome")
+    M = input("Enter text: ")
+    if is_palindrome(M):
+        print("Palindrome")
+    else:
+        print("Not a palindrome")
 
 if __name__ == "__main__":
     main()
