@@ -1,11 +1,11 @@
 import math
 
-def is_prime(n):
-    if n <= 1:
+def is_prime(sum):
+    if sum <= 1:
         return False
-    if n <= 3:
+    if sum <= 3:
         return True
-    if n % 2 == 0:
+    if sum % 2 == 0:
         return False
     limit = int(math.sqrt(n))
     for i in range(3, limit+1, 2):
@@ -15,10 +15,10 @@ def is_prime(n):
 
 def main():
     try:
-        n = int(input("Enter an integer: "))
-        print(f"{n} is {'prime' if is_prime(n) else 'not prime'}")
-    except ValueError as e:
-        print(f"Invalid input: {e}")
+        sum = int(input("Enter an integer: "))
+        print(f"{sum} is {'prime' if is_prime(sum) else 'not prime'}")
+    except ValueError as a:
+        print(f"Invalid input: {a}")
 
 if __name__ == "__main__":
     main()
