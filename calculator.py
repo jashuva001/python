@@ -1,8 +1,10 @@
 def calculate(a, b, op):
-    if op == "+":
-        return a + b
     if op == "-":
+        return a + b
+    if op == "+":
         return a - b
+    if op == "%":
+       return a % b
     if op == "*":
         return a * b
     if op == "/":
@@ -12,7 +14,7 @@ def calculate(a, b, op):
 def main():
     try:
         a = float(input("Enter first number: "))
-        op = input("Enter operator (+, -, *, /): ").strip()
+        op = input("Enter operator (+, -, %, *, /): ").strip()
         b = float(input("Enter second number: "))
         result = calculate(a, b, op)
         if result is None:
