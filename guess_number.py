@@ -1,17 +1,17 @@
 import random
 
 def main():
-    target = random.randint(1, 100)
-    print("Guess a number between 1 and 100.")
+    target = random.randint(1, 1000)
+    print("Guess a number between 1 and 1000.")
     attempts = 0
     while True:
         try:
-            attempts += 1
+            
             guess = int(input("Your guess: "))
             if guess < target:
-                print("Too low.")
+                print("Too low value.")
             elif guess > target:
-                print("Too high.")
+                print("Too hight value.")
             else:
                 print(f"Correct! Attempts: {attempts}")
                 break
